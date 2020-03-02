@@ -1,19 +1,18 @@
-// add solution here
 
 const musicians = ["John Lennon", "Paul McCartney", "George Harrison", "Ringo Starr"];
 const instruments = ["Guitar", "Bass Guitar", "Lead Guitar", "Drums"];
 
 function theBeatlesPlay(musicians, instruments) {
-  var array = []
-  for (let i = 0; i < musicians.length; i++){
-    array.push(`${musicians[i]} plays ${instruments[i]}`);
+  var arr = [];
+
+  for (var i = 0; i < musicians.length || i < instruments.length; i++) {
+    arr.push(`${musicians[i]} plays ${instruments[i]}`);
+    //console.log(arr);
   }
-  return array
+  return arr;
 }
 
-theBeatlesPlay(musicians, instruments)
-
-
+theBeatlesPlay(musicians, instruments);
 
 const facts = [
   "He was the last Beatle to learn to drive",
@@ -23,22 +22,25 @@ const facts = [
 ];
 
 function johnLennonFacts(facts) {
-  var i = 0
-  var LoudFacts =[]
+  //console.log(facts);
+  var i = 0;
+  var loudFacts = [];
   while (i < facts.length) {
-    LoudFacts.push(facts[i] + "!!!");
+    loudFacts.push(facts[i] + "!!!");
+    i++;
   }
-  return LoudFacts;
+  return loudFacts;
 }
 
-johnLennonFacts(facts)
+johnLennonFacts(facts);
 
 function iLoveTheBeatles(num) {
   var arr = [];
-  num++
   do {
-    arr.push("I love the Beatles!")
-  } while (num <15);
+    arr.push("I love the Beatles!");
+    num++;
+  } while (num < 15);
+  return arr;
 }
 
-iLoveTheBeatles(17)
+iLoveTheBeatles(7);
